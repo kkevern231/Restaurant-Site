@@ -22,19 +22,53 @@
       <div><h1>/ Welcome to Le Restaurant /</h1></div>
     </section>
 
-    <section class="events"><div class="events-carousel"></div></section>
+    <section class="events">
+      <button class="slide-arrow" id="slide-arrow-prev">&#8249;</button>
 
+      <button class="slide-arrow" id="slide-arrow-next">&#8250;</button>
+
+      <ul class="slides-container" id="slides-container">
+        <li class="slide"><img src="./images/food1.jpg" alt="food1" /></li>
+        <li class="slide">
+          <img src="./images/food2.jpg" alt="food2" />
+        </li>
+        <li class="slide">
+          <img src="./images/food3.jpg" alt="food3" />
+        </li>
+        <li class="slide"><img src="./images/food4.jpg" alt="food4" /></li>
+      </ul>
+    </section>
+    <!-- <section class="spacer"></section> -->
     <footer>
-      <ul>
-        <li>SomeLink</li>
-        <li>SomeLink</li>
-        <li>SomeLink</li>
-        <li>SomeLink</li>
-        <li>SomeLink</li>
-        <li>SomeLink</li>
-        <li>SomeLink</li>
-        <li>SomeLink</li>
+      <h2>We look forward to hosting you!</h2>
+      <ul class="ul1">
+        <li>Contact</li>
+        <li>Careers</li>
+        <li>Sustainability</li>
+        <li>Make a Suggestion</li>
+      </ul>
+      <ul class="ul2">
+        <li>Terms and Conditions</li>
+        <li>Allergy Advice</li>
+        <li>Stakeholders</li>
+        <li>Club Membership</li>
       </ul>
     </footer>
   </body>
 </html>
+<script>
+  const slidesContainer = document.getElementById("slides-container");
+  const slide = document.querySelector(".slide");
+  const prevButton = document.getElementById("slide-arrow-prev");
+  const nextButton = document.getElementById("slide-arrow-next");
+
+  nextButton.addEventListener("click", () => {
+    const slideWidth = slide.clientWidth;
+    slidesContainer.scrollLeft += slideWidth;
+  });
+
+  prevButton.addEventListener("click", () => {
+    const slideWidth = slide.clientWidth;
+    slidesContainer.scrollLeft -= slideWidth;
+  });
+</script>

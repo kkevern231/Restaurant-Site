@@ -26,7 +26,7 @@ nav ul li {
 }
 
 .sectionOne {
-  background-image: url(Le-Restaurant.jpg);
+  background-image: url(./images/Le-Restaurant.jpg);
   background-size: cover;
   background-position: center;
 
@@ -51,25 +51,109 @@ nav ul li {
   display: inline;
   align-self: center;
 }
+
+.spacer {
+  width: 100%;
+  height: 600px;
+  background-color: red;
+}
 footer {
   background-color: rgb(26, 24, 24);
   color: white;
   border-top: 2px solid white;
   display: grid;
-  grid-auto-flow: row;
-  height: fit-content;
+  grid-template-columns: repeat(4, 25vw);
+}
+footer h2 {
+  grid-column: 1/5;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  margin: 10px;
+  font-style: italic;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 footer ul {
-  display: grid;
-  grid-auto-flow: column;
-  grid-template-columns: repeat(4, 25vw);
-  grid-template-rows: repeat(4, 30px);
-  grid-column: 2, 3;
+  grid-template-rows: repeat(5, 60px);
+  display: flex;
+  flex-direction: column;
+  grid-row: 2/5;
+  align-items: start;
+  justify-content: space-evenly;
+}
+.ul1 {
+  grid-column: 2/2;
+}
+.ul2 {
+  grid-column: 3/3;
 }
 footer ul li {
-  margin: 10px;
-  grid-column-start: 2;
-  grid-column-end: 3;
+  margin: 5px;
+  color: darkgrey;
+  font-size: small;
+}
+
+.events {
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  border: 4px solid white;
+  border-left: 0px;
+  border-right: 0px;
+}
+.slides-container {
+  height: 40vh;
+  width: 100%;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+.slides-container li img {
+  height: 75%;
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.slide {
+  width: 100%;
+  height: 100%;
+  flex: 1 0 100%;
+}
+.slide-arrow {
+  position: absolute;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 4rem;
+  background-color: white;
+  border: none;
+  width: 2rem;
+  font-size: 3rem;
+  padding: 0;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 100ms;
+  border-radius: 100%;
+}
+.slide-arrow:hover,
+.slide-arrow:focus {
+  opacity: 1;
+}
+#slide-arrow-prev {
+  left: 0;
+  padding-left: 0.25rem;
+  border-radius: 0 2rem 2rem 0;
+}
+#slide-arrow-next {
+  right: 0;
+  padding-left: 0.75rem;
+  border-radius: 2rem 0 0 2rem;
 }
 
 /* Below is for screens above 450px wide*/

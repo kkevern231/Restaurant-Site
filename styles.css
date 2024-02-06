@@ -2,7 +2,6 @@ body {
   background-color: rgb(216, 233, 248);
   width: 100vw;
 }
-
 nav {
   background-color: white;
   padding: 5%;
@@ -24,7 +23,6 @@ nav div {
 
   max-width: min-content;
 }
-
 nav ul {
   font-size: x-large;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
@@ -39,7 +37,6 @@ nav ul li {
   height: 30px;
   width: 30px;
 }
-
 .sectionOne {
   background-image: url(./images/Le-Restaurant.jpg);
   background-size: cover;
@@ -59,14 +56,12 @@ nav ul li {
   align-self: center;
   height: min-content;
 }
-
 .sectionOne div > h1 {
   font-style: italic;
   color: black;
   display: inline;
   align-self: center;
 }
-
 .spacer {
   width: 100%;
   height: 600px;
@@ -109,7 +104,6 @@ footer ul li {
   color: darkgrey;
   font-size: small;
 }
-
 .events {
   margin: 0;
   position: relative;
@@ -176,37 +170,64 @@ footer ul li {
 /* Below is for screens above 450px wide*/
 @media screen and (min-width: 450px) {
   body {
-    background-color: aquamarine;
-    min-width: 100vw;
+    background-color: rgb(210, 240, 230);
+    width: 100%;
   }
 
   nav {
     position: fixed;
     top: 0px;
     height: 10px;
-    width: 100vw;
+    width: 100%;
     z-index: 1;
-
     display: flex;
-    /* grid-template-columns: repeat(3, 1fr); */
     flex-direction: column;
-
     align-content: space-evenly;
   }
 
   nav ul {
     display: grid;
+    width: 900px;
     grid-template-columns: repeat(4, 1fr);
   }
+
+  nav ul li {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+    font-style: italic;
+  }
+
   .sectionOne {
     background-image: url(./images/Le-Restaurant.jpg);
     height: 150vh;
-    width: 99%;
+    width: 100%;
   }
   .sectionOne div h1 {
     font-weight: bold;
     font-size: xx-large;
+    border-radius: 15px;
   }
+  .events {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+
+    width: 25vw;
+    margin-left: 40vw;
+  }
+
+  .slide {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    width: 25vw;
+  }
+  .slide-arrow {
+    background-color: rgb(210, 240, 230);
+  }
+
   footer {
     grid-template-rows: repeat(5, 1fr);
   }
